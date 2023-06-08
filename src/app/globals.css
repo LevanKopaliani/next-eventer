@@ -3,9 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --foreground-rgb: 3, 3, 3;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -18,10 +16,12 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: #fff;
 }
+
+/* .mainbanner {
+  background-image: url("../assets/img/mainbanner.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+} */
