@@ -7,6 +7,7 @@ export default function Home() {
     <main className="min-h-screen">
       <div className="mainbanner h-auto w-full">
         <Image
+          alt="main banner"
           src={MainBannerImg}
           className=" bg-cover bg-no-repeat bg-center w-full"
         />

@@ -6,34 +6,39 @@ import SearchX from "../assets/img/searchx.svg";
 
 const SearchBar = () => {
   const [serachActive, setSearchActive] = useState(false);
+
   const searchInput = useRef();
 
+  const handleActiveSearch = () => {
+    if (!serachActive) {
+      searchInput.current.focus();
+      setSearchActive(true);
+    } else {
+      setSearchActive(false);
+    }
+  };
+
   const SearchImage = serachActive ? (
-    <Image src={SearchX} width={18} height={18} />
+    <Image alt="closesearch" src={SearchX} width={16} height={16} />
   ) : (
-    <Image src={SearchImg} width={20} height={20} />
+    <Image alt="seach" src={SearchImg} width={20} height={20} />
   );
 
   return (
     <div className="search-bar flex flex-1 w-full">
-      <div
-        className={`search-form flex  justify-end w-full mr-4 ${
-          serachActive ? "border-b" : ""
-        }`}
-      >
+      <div className={`search-form flex  justify-end w-full mr-4 `}>
         <input
+          style={{
+            width: serachActive ? "100%" : "0px",
+            transition: "all 0.5s ease",
+          }}
           ref={searchInput}
           type="search"
-          onBlur={() => setSearchActive(false)}
+          onBlur={handleActiveSearch}
           placeholder="SEARCH"
-          className={`bg-transparent outline-0 ${
-            serachActive ? "w-full" : "w-0"
-          }`}
+          className="bg-transparent outline-0 border-b"
         />
-        <button
-          className="w-5 h-5"
-          onClick={() => setSearchActive(!serachActive)}
-        >
+        <button className="w-5 h-5" onClick={handleActiveSearch}>
           {SearchImage}
         </button>
       </div>
