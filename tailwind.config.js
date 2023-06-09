@@ -10,6 +10,11 @@ module.exports = {
       colors: {
         "hover-red": "#fe4e6e",
       },
+
+      boxShadow: {
+        "nav-shadow": "0px 6px 14px 0px rgba(181, 181, 181, 0.26)",
+      },
+
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":

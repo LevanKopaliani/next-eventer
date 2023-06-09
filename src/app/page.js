@@ -4,7 +4,7 @@ import MainBannerImg from "../assets/img/mainbanner.png";
 
 export default function Home() {
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen" style={{ height: "2000px" }}>
       <div className="mainbanner h-auto w-full">
         <Image
           alt="main banner"
